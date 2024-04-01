@@ -36,10 +36,10 @@ interface FinancialChartStockIndexChartState {
   data: DataItem[];
 }
 
-class FinancialChartStockIndexChart extends React.Component<{}, FinancialChartStockIndexChartState> {
+class FinancialChartStockIndexChart extends React.Component<object, FinancialChartStockIndexChartState> {
     subscription: any = null;
 
-    constructor(props: {}) {
+    constructor(props:object) {
         super(props);
         this.state = { data: StockIndexData.getData() };
     }
